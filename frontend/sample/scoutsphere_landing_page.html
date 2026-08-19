@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ScoutSphere - Your Career, Autonomously Discovered</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#2563eb",
+                        "tertiary-fixed": "#6ffbbe",
+                        "surface-tint": "#0053db",
+                        "secondary-fixed": "#89f5e7",
+                        "outline-variant": "#c3c6d7",
+                        "on-primary-fixed": "#00174b",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "secondary-container": "#86f2e4",
+                        "primary-fixed": "#dbe1ff",
+                        "background": "#f7f9fb",
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#b4c5ff",
+                        "surface-bright": "#f7f9fb",
+                        "inverse-on-surface": "#eff1f3",
+                        "tertiary-container": "#007d55",
+                        "error": "#ba1a1a",
+                        "on-tertiary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "on-primary-container": "#eeefff",
+                        "tertiary-fixed-dim": "#4edea3",
+                        "tertiary": "#006242",
+                        "secondary": "#006a61",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-background": "#191c1e",
+                        "on-tertiary-fixed": "#002113",
+                        "on-tertiary-container": "#bdffdb",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#e6e8ea",
+                        "primary": "#004ac6",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#005236",
+                        "surface-variant": "#e0e3e5",
+                        "on-secondary-fixed-variant": "#005049",
+                        "on-secondary-container": "#006f66",
+                        "outline": "#737686",
+                        "surface-dim": "#d8dadc",
+                        "on-secondary-fixed": "#00201d",
+                        "on-surface-variant": "#434655",
+                        "surface-container-low": "#f2f4f6",
+                        "inverse-surface": "#2d3133",
+                        "surface": "#f7f9fb",
+                        "surface-container": "#eceef0",
+                        "on-primary": "#ffffff",
+                        "on-surface": "#191c1e",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed-dim": "#6bd8cb"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-sm": "12px",
+                        "stack-md": "24px",
+                        "stack-lg": "48px",
+                        "base": "8px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "32px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "display-lg-mobile": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "label-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #f7f9fb 0%, #e0e3e5 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col antialiased">
+<!-- TopNavBar -->
+<header class="bg-surface/80 dark:bg-on-background/80 backdrop-blur-md sticky top-0 full-width w-full border-b border-white/20 dark:border-outline-variant/10 shadow-sm z-50">
+<div class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-16">
+<div class="flex items-center gap-stack-md">
+<a class="text-headline-md font-headline-md font-bold text-primary dark:text-primary-fixed-dim" href="#">ScoutSphere</a>
+<nav class="hidden md:flex gap-stack-sm items-center">
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:bg-primary-container/10 dark:hover:bg-primary-container/20 transition-all duration-200 px-3 py-2 rounded-md font-label-md text-label-md" href="#">Discover</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:bg-primary-container/10 dark:hover:bg-primary-container/20 transition-all duration-200 px-3 py-2 rounded-md font-label-md text-label-md" href="#">Analyze</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:bg-primary-container/10 dark:hover:bg-primary-container/20 transition-all duration-200 px-3 py-2 rounded-md font-label-md text-label-md" href="#">Match</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:bg-primary-container/10 dark:hover:bg-primary-container/20 transition-all duration-200 px-3 py-2 rounded-md font-label-md text-label-md" href="#">Track</a>
+</nav>
+</div>
+<!-- Mobile Menu Button -->
+<button class="md:hidden text-on-surface p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<!-- Trailing Actions (Desktop) -->
+<div class="hidden md:flex items-center gap-stack-sm">
+<div class="flex items-center gap-2 mr-4">
+<button class="text-on-surface-variant hover:text-primary transition-colors p-2 rounded-full hover:bg-surface-variant">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-colors p-2 rounded-full hover:bg-surface-variant">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+</div>
+<button class="px-4 py-2 font-label-md text-label-md text-primary bg-primary/10 hover:bg-primary/20 rounded-lg transition-colors">AI Chat</button>
+<button class="px-4 py-2 font-label-md text-label-md text-on-primary bg-primary hover:bg-primary/90 rounded-lg shadow-sm transition-all hover:scale-95 duration-150">Sign In</button>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative pt-24 pb-32 overflow-hidden hero-gradient">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-stack-lg items-center relative z-10">
+<!-- Hero Content -->
+<div class="flex flex-col gap-stack-md">
+<div class="inline-flex items-center gap-2 bg-secondary-container/30 border border-secondary-fixed-dim/50 px-3 py-1.5 rounded-full w-fit">
+<span class="material-symbols-outlined text-secondary text-sm">auto_awesome</span>
+<span class="font-label-sm text-label-sm text-secondary">AI-Powered Career Intelligence</span>
+</div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface">
+                        Your Career, <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Autonomously Discovered.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                        The AI career assistant that finds, analyzes, and applies to opportunities for you. Stop searching and start advancing with data-driven professional growth.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-stack-sm pt-4">
+<button class="bg-primary text-on-primary font-label-md text-label-md px-6 py-3 rounded-lg shadow-md hover:shadow-lg hover:bg-primary/90 transition-all duration-200 flex items-center justify-center gap-2">
+                            Get Started for Free
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+<button class="glass-panel text-primary font-label-md text-label-md px-6 py-3 rounded-lg hover:bg-surface-variant/50 transition-all duration-200 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">play_circle</span>
+                            Watch Demo
+                        </button>
+</div>
+</div>
+<!-- Hero Visual (Bento-style composition) -->
+<div class="relative w-full h-[500px]">
+<!-- Abstract Background Element -->
+<div class="absolute inset-0 bg-primary/5 rounded-full blur-3xl opacity-50 translate-x-10 translate-y-10"></div>
+<div class="grid grid-cols-12 grid-rows-12 gap-4 h-full relative z-10">
+<!-- Main Image Card -->
+<div class="col-span-12 md:col-span-8 row-span-8 md:row-span-12 glass-panel rounded-xl overflow-hidden relative shadow-lg">
+<img class="w-full h-full object-cover" data-alt="A professional woman reviewing an interactive holographic career dashboard in a modern, light-filled office. The environment is sleek, utilizing a modern SaaS aesthetic with clean lines, soft natural lighting, and subtle glassmorphic UI overlays hovering in the air. The overall tone is intelligent, confident, and highly advanced." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuSueEMHL1KVrpaiFdPeXUNhidP_7LX3ELxAJKrsZFjhSztQkFSbLIXKx3RNFFJD5wY11bH_jsvHzAzWleDn3BmHu9S3eqss-7P3Zjk_vu-GL-uJqT-Dp8-fxvNW5ZowallHBqo6iATv367U-bERjl7WqZfmXZ_aPqNbWyRKP_YSx8E8P3mSknW46G-VhA-rbedpK66dA8WoFuDTHUJnjGDSVoxC6RLIFKzCKZFDWP-1ZjKUZKHfHu"/>
+<!-- Overlay Gradient -->
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/60 to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 text-white">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-sm">check_circle</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary-fixed-dim">Match Found</span>
+</div>
+<p class="font-headline-md text-headline-md text-white shadow-sm">Senior Product Designer</p>
+<p class="font-body-sm text-body-sm text-white/80">98% Skill Alignment</p>
+</div>
+</div>
+<!-- Stats Card 1 -->
+<div class="hidden md:flex col-span-4 row-span-5 col-start-9 row-start-2 glass-panel rounded-xl flex-col justify-center items-center p-4 text-center transform translate-x-4">
+<span class="material-symbols-outlined text-primary text-3xl mb-2">trending_up</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">3x</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Interview Rate</p>
+</div>
+<!-- Mini Chart Card -->
+<div class="hidden md:flex col-span-5 row-span-5 col-start-7 row-start-8 glass-panel rounded-xl flex-col p-4 z-20 -translate-x-8">
+<h4 class="font-label-md text-label-md text-on-surface mb-2">Skill Gap Analysis</h4>
+<div class="space-y-3 w-full">
+<div>
+<div class="flex justify-between text-xs text-on-surface-variant mb-1">
+<span>Figma</span>
+<span>95%</span>
+</div>
+<div class="w-full bg-surface-variant rounded-full h-1.5">
+<div class="bg-tertiary h-1.5 rounded-full" style="width: 95%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-xs text-on-surface-variant mb-1">
+<span>Prototyping</span>
+<span>80%</span>
+</div>
+<div class="w-full bg-surface-variant rounded-full h-1.5">
+<div class="bg-secondary h-1.5 rounded-full" style="width: 80%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Section (Bento Grid) -->
+<section class="py-24 bg-surface">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-4">Intelligent Career Engineering</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">We leverage advanced models to optimize every touchpoint of your job search and career trajectory.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[250px]">
+<!-- Feature 1: Large Span -->
+<div class="md:col-span-2 glass-panel rounded-xl p-6 flex flex-col justify-between relative overflow-hidden group hover:shadow-lg transition-all duration-300">
+<div class="z-10 w-2/3">
+<span class="material-symbols-outlined text-primary mb-4 p-2 bg-primary-container/20 rounded-lg inline-block">search_insights</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-2">Automated Discovery</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Our AI constantly scans the market, identifying unlisted and highly-relevant roles based on your dynamic profile.</p>
+</div>
+<div class="absolute -bottom-10 -right-10 w-64 h-64 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/20 transition-all"></div>
+<img class="absolute top-1/2 -translate-y-1/2 right-4 w-48 h-48 object-contain opacity-80 mix-blend-multiply" data-alt="A sleek, abstract data visualization showing glowing interconnected nodes representing job opportunities on a deep blue background. The style is modern, glassmorphic, and high-tech." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUslFgGbEBuJzWju4fYmexGynZl24-dCBl5d94DxCHG-9zgms_d4Y7E06bswZHTsUmfp-8zFmOJJ2_Zxt9rIo2JjrcLRxxulaJtRHIBc4sBfxW1T9aK-KQ33TVkJizUYcGtV5xIDTSoFmHg7HViUwBCwF430De0pJrOi0bkLULA1Dj_kKizTFWjIpPe4VN5TmmEI71hvwVmMliH4tejRhOzozvz0K6s44VbBSxEyMuz8z9xLvCJwZn"/>
+</div>
+<!-- Feature 2 -->
+<div class="glass-panel rounded-xl p-6 flex flex-col gap-4 group hover:-translate-y-1 transition-transform">
+<span class="material-symbols-outlined text-secondary mb-2 p-2 bg-secondary-container/20 rounded-lg w-fit inline-block">document_scanner</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">ATS-Friendly Tailoring</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex-grow">Instantly adapt your resume keywords and phrasing to match specific job descriptions seamlessly.</p>
+<div class="mt-auto h-20 w-full rounded bg-gradient-to-r from-surface-variant to-surface relative overflow-hidden border border-outline-variant/30">
+<div class="absolute left-0 top-0 h-full w-1/3 bg-secondary/10 flex items-center justify-center border-r border-outline-variant/30">
+<span class="material-symbols-outlined text-secondary">check</span>
+</div>
+</div>
+</div>
+<!-- Feature 3 -->
+<div class="glass-panel rounded-xl p-6 flex flex-col gap-4 group hover:-translate-y-1 transition-transform">
+<span class="material-symbols-outlined text-tertiary mb-2 p-2 bg-tertiary-container/20 rounded-lg w-fit inline-block">psychology</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Skill Gap Analysis</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Identify exactly what technical or soft skills are missing between your current profile and your dream role.</p>
+</div>
+<!-- Feature 4: Large Span -->
+<div class="md:col-span-2 glass-panel rounded-xl p-6 flex items-center gap-6 relative overflow-hidden group">
+<div class="flex-1 z-10">
+<span class="material-symbols-outlined text-primary mb-4 p-2 bg-primary-container/20 rounded-lg inline-block">map</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-2">Interactive Roadmaps</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Visualize your 5-year trajectory with actionable, step-by-step guidance generated by industry-specific AI models.</p>
+</div>
+<div class="flex-1 hidden md:flex justify-end relative h-full items-center">
+<!-- Simple Timeline UI abstraction -->
+<div class="w-full max-w-[200px] space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-3 h-3 rounded-full bg-primary ring-4 ring-primary/20"></div>
+<div class="h-2 w-full bg-surface-variant rounded-full"><div class="h-full bg-primary rounded-full w-full"></div></div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-3 h-3 rounded-full bg-tertiary"></div>
+<div class="h-2 w-full bg-surface-variant rounded-full"><div class="h-full bg-tertiary rounded-full w-1/2"></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-on-background py-stack-lg border-t border-outline-variant/30">
+<div class="flex flex-col md:flex-row justify-between items-center px-gutter max-w-container-max mx-auto gap-stack-md">
+<div class="flex flex-col items-center md:items-start gap-2">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">ScoutSphere</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">© 2024 ScoutSphere AI. Empowering professional growth.</span>
+</div>
+<nav class="flex flex-wrap justify-center gap-stack-md">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary hover:opacity-80 transition-opacity" href="#">Resources</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary hover:opacity-80 transition-opacity" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary hover:opacity-80 transition-opacity" href="#">Terms of Service</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary hover:opacity-80 transition-opacity" href="#">API Docs</a>
+</nav>
+</div>
+</footer>
+</body></html>

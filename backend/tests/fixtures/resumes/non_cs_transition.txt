@@ -1,0 +1,19 @@
+Marcus Vance
+Email: marcus.vance@example.com | Portfolio: marcusvance.dev
+
+SUMMARY:
+Former Business Analyst transitioning into Software Development. Self-taught web developer proficient in JavaScript, React, HTML, CSS, Node.js, and SQL. Problem solver with strong communication skills.
+
+EDUCATION:
+B.A. Business Administration | Boston College (Graduated: 2023)
+
+EXPERIENCE:
+Business Operations Analyst | Finance Global (2023 - 2025)
+- Automated spreadsheet reporting workflows using Python scripts and SQL queries.
+- Collaborated across Agile product management teams.
+
+PROJECTS:
+- FinTrack Dashboard: Personal finance tracker built with React, Node.js, and PostgreSQL.
+
+SKILLS:
+JavaScript, React, HTML, CSS, SQL, Python, Problem Solving, Team Collaboration, Agile

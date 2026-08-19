@@ -1,0 +1,19 @@
+Priya Patel
+Email: priya.patel@example.com | GitHub: github.com/priyapatel-dev
+
+SUMMARY:
+Mobile Application Developer with 2 years experience crafting cross-platform iOS and Android apps using Flutter, Dart, React Native, and Swift.
+
+EDUCATION:
+B.S. Computer Engineering | Georgia Tech (Graduation: 2026)
+
+EXPERIENCE:
+Mobile Developer Intern | AppVentures (Jun 2025 - Dec 2025)
+- Developed cross-platform Flutter and React Native mobile applications.
+- Integrated RESTful APIs and offline SQLite database synchronization.
+
+PROJECTS:
+- FitPulse App: Cross-platform fitness tracking app built with Flutter, Dart, and Firebase.
+
+SKILLS:
+Dart, Flutter, React Native, Swift, Kotlin, SQLite, REST APIs, Git

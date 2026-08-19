@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ScoutSphere - Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-container": "#2563eb",
+                      "tertiary-fixed": "#6ffbbe",
+                      "surface-tint": "#0053db",
+                      "secondary-fixed": "#89f5e7",
+                      "outline-variant": "#c3c6d7",
+                      "on-primary-fixed": "#00174b",
+                      "primary-fixed-dim": "#b4c5ff",
+                      "secondary-container": "#86f2e4",
+                      "primary-fixed": "#dbe1ff",
+                      "background": "#f7f9fb",
+                      "on-error": "#ffffff",
+                      "inverse-primary": "#b4c5ff",
+                      "surface-bright": "#f7f9fb",
+                      "inverse-on-surface": "#eff1f3",
+                      "tertiary-container": "#007d55",
+                      "error": "#ba1a1a",
+                      "on-tertiary": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "on-primary-fixed-variant": "#003ea8",
+                      "on-primary-container": "#eeefff",
+                      "tertiary-fixed-dim": "#4edea3",
+                      "tertiary": "#006242",
+                      "secondary": "#006a61",
+                      "surface-container-highest": "#e0e3e5",
+                      "on-background": "#191c1e",
+                      "on-tertiary-fixed": "#002113",
+                      "on-tertiary-container": "#bdffdb",
+                      "on-secondary": "#ffffff",
+                      "surface-container-high": "#e6e8ea",
+                      "primary": "#004ac6",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary-fixed-variant": "#005236",
+                      "surface-variant": "#e0e3e5",
+                      "on-secondary-fixed-variant": "#005049",
+                      "on-secondary-container": "#006f66",
+                      "outline": "#737686",
+                      "surface-dim": "#d8dadc",
+                      "on-secondary-fixed": "#00201d",
+                      "on-surface-variant": "#434655",
+                      "surface-container-low": "#f2f4f6",
+                      "inverse-surface": "#2d3133",
+                      "surface": "#f7f9fb",
+                      "surface-container": "#eceef0",
+                      "on-primary": "#ffffff",
+                      "on-surface": "#191c1e",
+                      "on-error-container": "#93000a",
+                      "secondary-fixed-dim": "#6bd8cb"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-sm": "12px",
+                      "stack-md": "24px",
+                      "stack-lg": "48px",
+                      "base": "8px",
+                      "gutter": "24px",
+                      "margin-mobile": "16px",
+                      "margin-desktop": "32px",
+                      "container-max": "1280px"
+              },
+              "fontFamily": {
+                      "headline-lg": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Inter"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Inter"
+                      ],
+                      "display-lg-mobile": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "label-sm": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "36px",
+                              {
+                                      "lineHeight": "44px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.03em",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+          .glass-panel {
+              background: rgba(255, 255, 255, 0.7);
+              backdrop-filter: blur(16px);
+              -webkit-backdrop-filter: blur(16px);
+              border: 1px solid rgba(255, 255, 255, 0.8);
+          }
+          .glass-panel-darker {
+              background: rgba(255, 255, 255, 0.85);
+              backdrop-filter: blur(20px);
+              -webkit-backdrop-filter: blur(20px);
+              border: 1px solid rgba(255, 255, 255, 0.9);
+          }
+      </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased min-h-screen flex overflow-hidden">
+<!-- SideNavBar -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-surface-container-low/90 backdrop-blur-xl border-r border-white/20 shadow-md flex flex-col py-base gap-stack-sm z-40 hidden md:flex">
+<div class="px-gutter pt-stack-sm pb-stack-md flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center text-primary font-bold">
+<span class="material-symbols-outlined" data-icon="rocket_launch">rocket_launch</span>
+</div>
+<div>
+<h1 class="font-headline-md text-headline-md font-bold text-primary">ScoutSphere</h1>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Career Assistant</p>
+</div>
+</div>
+<nav class="flex-1 flex flex-col gap-2 mt-4">
+<a class="flex items-center gap-3 bg-primary-container text-on-primary-container rounded-lg px-4 py-2 mx-2 font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard" data-weight="fill" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-highest/50 rounded-lg px-4 py-2 mx-2 font-label-md text-label-md transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+                Tracker
+            </a>
+<a class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-highest/50 rounded-lg px-4 py-2 mx-2 font-label-md text-label-md transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="map">map</span>
+                Roadmap
+            </a>
+<a class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-highest/50 rounded-lg px-4 py-2 mx-2 font-label-md text-label-md transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="psychology">psychology</span>
+                Skill Gap
+            </a>
+</nav>
+<div class="px-4 pb-stack-sm mt-auto">
+<button class="w-full bg-primary text-on-primary rounded-lg py-3 font-label-md text-label-md shadow-sm hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="auto_awesome">auto_awesome</span>
+                Optimize Resume
+            </button>
+</div>
+<div class="mt-auto border-t border-outline-variant/20 pt-4 pb-4">
+<a class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-highest/50 rounded-lg px-4 py-2 mx-2 font-label-md text-label-md transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+                Help
+            </a>
+<a class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-highest/50 rounded-lg px-4 py-2 mx-2 font-label-md text-label-md transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                Settings
+            </a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 md:ml-64 flex flex-col min-h-screen overflow-y-auto">
+<!-- TopNavBar (Authenticated) -->
+<header class="bg-surface/80 backdrop-blur-md docked full-width top-0 sticky border-b border-white/20 shadow-sm z-30">
+<div class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-16">
+<!-- Mobile Menu Button (Hidden on Desktop) -->
+<button class="md:hidden text-on-surface p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div class="flex-1 md:hidden">
+<span class="text-headline-md font-headline-md font-bold text-primary">ScoutSphere</span>
+</div>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Discover</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Analyze</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Match</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Track</a>
+</nav>
+<!-- Trailing Actions -->
+<div class="flex items-center gap-4">
+<div class="hidden lg:flex items-center gap-2">
+<button class="p-2 text-on-surface-variant hover:bg-primary-container/10 rounded-full transition-all duration-200">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-primary-container/10 rounded-full transition-all duration-200">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+</div>
+<button class="hidden md:flex items-center gap-2 text-primary font-label-md text-label-md hover:bg-primary-container/10 px-3 py-1.5 rounded-full transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="chat">chat</span>
+                        AI Chat
+                    </button>
+<img alt="User profile" class="w-8 h-8 rounded-full object-cover border border-outline-variant/30" data-alt="A small, circular avatar portrait of a young professional smiling slightly against a neutral gray background. The lighting is soft and flattering, suitable for a modern SaaS web interface. Minimalist and clean aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-EX6tC5luw1sJX1b7wzZ6SpikLQVk0SIZlOlNG0U0kH2yRZuwOgY8Fo0rNlV1qN_u48jeZlASEOK_3jJzYSVpaeloNy5sby35ySkaVhD4eGXPh6XjO5zyBSk4Z9pmKD6D_cx0Nxu_w3brQWdAsEIFJueJ1pFxIkwgaEcKBoB8Z_YBXPDF--Lyhvor517knRPp4By8-bBOuXCafOf5uHHHEZV6DrbbSadsHGtnJFZoaZGJV74647tK"/>
+</div>
+</div>
+</header>
+<!-- Dashboard Content -->
+<div class="p-gutter max-w-container-max mx-auto w-full flex-1 flex flex-col gap-stack-lg pb-24">
+<!-- Quick Stats Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-stack-sm">
+<div class="glass-panel rounded-xl p-6 flex flex-col gap-2 relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-primary-container/10 rounded-full blur-2xl group-hover:bg-primary-container/20 transition-all duration-500"></div>
+<div class="flex justify-between items-start z-10">
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Opportunities Found Today</p>
+<h2 class="font-display-lg text-display-lg text-primary mt-1">24</h2>
+</div>
+<div class="p-2 bg-primary-container/10 rounded-lg text-primary">
+<span class="material-symbols-outlined" data-icon="manage_search">manage_search</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-secondary flex items-center gap-1 z-10 mt-2">
+<span class="material-symbols-outlined text-sm" data-icon="trending_up">trending_up</span>
+                        +12% vs yesterday
+                    </p>
+</div>
+<div class="glass-panel rounded-xl p-6 flex flex-col gap-2 relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-tertiary-container/10 rounded-full blur-2xl group-hover:bg-tertiary-container/20 transition-all duration-500"></div>
+<div class="flex justify-between items-start z-10">
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Applications in Progress</p>
+<h2 class="font-display-lg text-display-lg text-tertiary mt-1">3</h2>
+</div>
+<div class="p-2 bg-tertiary-container/10 rounded-lg text-tertiary">
+<span class="material-symbols-outlined" data-icon="pending_actions">pending_actions</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 z-10 mt-2">
+                        2 pending response
+                    </p>
+</div>
+<div class="glass-panel rounded-xl p-6 flex flex-col gap-2 relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-secondary-container/10 rounded-full blur-2xl group-hover:bg-secondary-container/20 transition-all duration-500"></div>
+<div class="flex justify-between items-start z-10">
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Resume Strength</p>
+<h2 class="font-display-lg text-display-lg text-secondary mt-1">85%</h2>
+</div>
+<div class="relative w-12 h-12 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-variant" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="100, 100" stroke-width="3"></path>
+<path class="text-secondary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="85, 100" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+</div>
+</div>
+<button class="font-label-sm text-label-sm text-primary hover:underline self-start z-10 mt-2 flex items-center gap-1">
+                        View AI Suggestions <span class="material-symbols-outlined text-xs" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</section>
+<!-- Recommended Section -->
+<section class="flex flex-col gap-stack-sm">
+<div class="flex justify-between items-end mb-2">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Recommended for You</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">AI-matched opportunities based on your skills</p>
+</div>
+<button class="font-label-sm text-label-sm text-primary hover:bg-primary-container/10 px-3 py-1.5 rounded-full transition-all">View All</button>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-stack-md">
+<!-- Card 1 -->
+<article class="glass-panel rounded-xl p-5 flex flex-col gap-4 hover:shadow-lg transition-shadow duration-300 relative group border-l-4 border-l-secondary">
+<div class="flex justify-between items-start">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface flex items-center justify-center border border-outline-variant/30">
+<img alt="Company Logo" class="w-8 h-8 object-contain" data-alt="A clean, minimalist logo of a modern tech company, featuring a simple geometric shape in dark blue and white, suitable for a corporate profile placeholder." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrduLEb_5myUx5Lhqg59tBK8fSUv39v5YxXzxoplglkU3iGTLC2eWpDm8iKoTnyUtAR7D9i1bkHyqNMCCHhfmY_MLFMmOEOQeDDaR2tEkOwrKEKe_HBAxkd10wnu7j_4SJStAivr8pl-RMU24GJvatI16qSLOvLJ1TJaI5ulJrApfvFvHgj-VrkAbGB_9VfigTTmrLD82btZkKZYWhEr-UZ3bUvMp8hq36HXkzDVJxrLeTFPcqqaCy"/>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface text-lg">Data Science Intern</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">TechFlow Systems • San Francisco, CA (Hybrid)</p>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-container/20 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs" data-icon="target">target</span> 94% Match
+                                </span>
+</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 rounded-md bg-surface-variant text-on-surface-variant font-label-sm text-label-sm border border-outline-variant/20">Python</span>
+<span class="px-2 py-1 rounded-md bg-surface-variant text-on-surface-variant font-label-sm text-label-sm border border-outline-variant/20">Machine Learning</span>
+<span class="px-2 py-1 rounded-md bg-tertiary-container/10 text-tertiary font-label-sm text-label-sm border border-tertiary-container/30">SQL (Required)</span>
+</div>
+<div class="mt-auto pt-4 border-t border-outline-variant/20 flex justify-between items-center">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Posted 2 days ago</span>
+<button class="bg-surface text-primary border border-primary px-4 py-2 rounded-lg font-label-md text-label-md hover:bg-primary-container/10 transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="analytics">analytics</span> Analyze Fit
+                            </button>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="glass-panel rounded-xl p-5 flex flex-col gap-4 hover:shadow-lg transition-shadow duration-300 relative group border-l-4 border-l-secondary">
+<div class="flex justify-between items-start">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface flex items-center justify-center border border-outline-variant/30">
+<img alt="Company Logo" class="w-8 h-8 object-contain" data-alt="A vibrant, modern logo for a startup company, featuring a stylized abstract icon in teal and orange, suitable for a corporate profile placeholder." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJI37YZYV58wuIVsavH_gN_C6jslmAWznvqX_pl0WgbU_bH_KykBzYW-RMVBip0bwt8PmKZkl3g0NTnfr-p6S2nxjoDGZJuBOUoDjK8Lks5W7GRNznxgjOmaSCLh6yY0bYmhbLzxVFBhPYWvVCY5ssDuEhzqPLBcK4Ndmg_etC3ZgaHMhNmpWEgXiUIDihnq-yd7fvBZIJX3I-HTeeaD4wSnXZVRl6WfMQ-8sPzzAsG0bJB8s3d4t3"/>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface text-lg">Backend Engineering Co-op</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">CloudNova • Remote</p>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-container/20 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs" data-icon="target">target</span> 88% Match
+                                </span>
+</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 rounded-md bg-surface-variant text-on-surface-variant font-label-sm text-label-sm border border-outline-variant/20">Python</span>
+<span class="px-2 py-1 rounded-md bg-surface-variant text-on-surface-variant font-label-sm text-label-sm border border-outline-variant/20">Django</span>
+<span class="px-2 py-1 rounded-md bg-surface-variant text-on-surface-variant font-label-sm text-label-sm border border-outline-variant/20">AWS</span>
+</div>
+<div class="mt-auto pt-4 border-t border-outline-variant/20 flex justify-between items-center">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Posted today</span>
+<button class="bg-surface text-primary border border-primary px-4 py-2 rounded-lg font-label-md text-label-md hover:bg-primary-container/10 transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="analytics">analytics</span> Analyze Fit
+                            </button>
+</div>
+</article>
+</div>
+</section>
+</div>
+</main>
+<!-- AI Chat Widget -->
+<div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-4 max-w-sm">
+<!-- Chat Bubble -->
+<div class="glass-panel-darker rounded-2xl rounded-br-sm p-4 shadow-xl border border-white/40 transform transition-transform hover:-translate-y-1">
+<div class="flex gap-3">
+<div class="w-8 h-8 rounded-full bg-primary-container/20 flex items-center justify-center text-primary flex-shrink-0 mt-1">
+<span class="material-symbols-outlined text-sm" data-icon="smart_toy">smart_toy</span>
+</div>
+<div>
+<p class="font-body-sm text-body-sm text-on-surface leading-relaxed">
+                        I found <strong>3 new internships</strong> that strongly match your Python and Data Science skills. Want to see a quick analysis?
+                    </p>
+<div class="flex gap-2 mt-3">
+<button class="px-3 py-1.5 bg-primary text-on-primary rounded-full font-label-sm text-label-sm hover:opacity-90 transition-opacity">Yes, show me</button>
+<button class="px-3 py-1.5 bg-surface-variant text-on-surface-variant rounded-full font-label-sm text-label-sm hover:bg-surface-container-highest transition-colors">Later</button>
+</div>
+</div>
+</div>
+<!-- Close Button for Bubble -->
+<button class="absolute top-2 right-2 text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined text-sm" data-icon="close">close</span>
+</button>
+</div>
+<!-- FAB -->
+<button class="w-14 h-14 bg-primary text-on-primary rounded-full shadow-lg flex items-center justify-center hover:scale-105 transition-transform duration-200">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+</button>
+</div>
+</body></html>

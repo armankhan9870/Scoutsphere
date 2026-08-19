@@ -1,0 +1,21 @@
+Samantha Chen
+Email: samantha.chen@example.com | LinkedIn: linkedin.com/in/samchen-ds
+
+SUMMARY:
+Data Science Senior specializing in Machine Learning, Statistical Analysis, NLP, PyTorch, Pandas, and Scikit-Learn. Passionate about vector embeddings and RAG pipelines.
+
+EDUCATION:
+B.S. Statistics & Data Science | UC Berkeley (Graduation: Dec 2026)
+GPA: 3.9 / 4.0
+
+EXPERIENCE:
+Data Science Intern | AI Research Labs (May 2025 - Aug 2025)
+- Trained NLP transformers and sentence embedding models using PyTorch.
+- Analyzed large tabular datasets with Pandas and Scikit-Learn.
+
+PROJECTS:
+- MedQuery RAG: Medical Q&A system using LangChain, Hugging Face embeddings, and vector databases.
+- MarketPredict: Stock trend forecasting tool using Python, PyTorch, and SQL.
+
+SKILLS:
+Python, PyTorch, Pandas, NumPy, Scikit-Learn, SQL, LangChain, R, Hugging Face, NLP

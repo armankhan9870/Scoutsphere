@@ -1,0 +1,115 @@
+version: '3.8'
+
+services:
+  # PostgreSQL 17 + pgvector Extension
+  db:
+    image: pgvector/pgvector:pg17
+    container_name: scoutsphere_db
+    restart: always
+    environment:
+      POSTGRES_USER: scoutsphere
+      POSTGRES_PASSWORD: scoutsphere_dev_pass
+      POSTGRES_DB: scoutsphere_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U scoutsphere -d scoutsphere_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # Redis 7 (Task Queue & Cache)
+  redis:
+    image: redis:7-alpine
+    container_name: scoutsphere_redis
+    restart: always
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # FastAPI Backend API Server
+  backend:
+    build:
+      context: ..
+      dockerfile: infra/docker/Dockerfile.backend
+    container_name: scoutsphere_backend
+    restart: always
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://scoutsphere:scoutsphere_dev_pass@db:5432/scoutsphere_db
+      - REDIS_URL=redis://redis:6379/0
+      - ENVIRONMENT=development
+      - LOG_LEVEL=INFO
+      - JWT_SECRET=super_secret_jwt_key_change_in_production_32bytes_min
+      - LLM_PROVIDER_CHAIN=gemini,groq,openrouter,ollama
+      - GEMINI_API_KEY=${GEMINI_API_KEY:-}
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY:-}
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - ../backend:/app/backend
+
+  # Celery Asynchronous Worker
+  celery_worker:
+    build:
+      context: ..
+      dockerfile: infra/docker/Dockerfile.backend
+    container_name: scoutsphere_celery_worker
+    restart: always
+    command: celery -A app.worker.celery_app.celery_app worker --loglevel=info
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://scoutsphere:scoutsphere_dev_pass@db:5432/scoutsphere_db
+      - REDIS_URL=redis://redis:6379/0
+      - ENVIRONMENT=development
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  # Celery Beat Periodic Scheduler
+  celery_beat:
+    build:
+      context: ..
+      dockerfile: infra/docker/Dockerfile.backend
+    container_name: scoutsphere_celery_beat
+    restart: always
+    command: celery -A app.worker.celery_app.celery_app beat --loglevel=info
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://scoutsphere:scoutsphere_dev_pass@db:5432/scoutsphere_db
+      - REDIS_URL=redis://redis:6379/0
+      - ENVIRONMENT=development
+    depends_on:
+      redis:
+        condition: service_healthy
+
+  # React 19 + Vite Frontend
+  frontend:
+    build:
+      context: ..
+      dockerfile: infra/docker/Dockerfile.frontend
+    container_name: scoutsphere_frontend
+    restart: always
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_BACKEND_URL=http://backend:8000
+    depends_on:
+      - backend
+    volumes:
+      - ../frontend:/app
+      - /app/node_modules
+
+volumes:
+  postgres_data:

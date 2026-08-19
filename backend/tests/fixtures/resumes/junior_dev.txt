@@ -1,0 +1,21 @@
+Alex Rivera
+Email: alex.rivera@scoutsphere.ai | GitHub: github.com/alexrivera
+
+SUMMARY:
+Junior Full-Stack Engineer with 1.5 years experience building web applications using Python, FastAPI, React, TypeScript, and PostgreSQL. Experienced in Docker containerization and async API microservices.
+
+EDUCATION:
+B.S. Computer Science | State University (Graduation: May 2026)
+GPA: 3.8 / 4.0
+
+WORK EXPERIENCE:
+Software Engineering Intern | TechCorp (Jun 2025 - Aug 2025)
+- Built RESTful microservices with FastAPI, PostgreSQL, and Redis caching.
+- Developed React frontend components with Tailwind CSS.
+
+PROJECTS:
+- ScoutSphere Platform: Multi-agent AI career assistant using FastAPI, LangGraph, and pgvector.
+- TaskFlow: Asynchronous task queue manager built with Celery and Docker.
+
+SKILLS:
+Python, FastAPI, React, TypeScript, PostgreSQL, Docker, Redis, Git, REST APIs
