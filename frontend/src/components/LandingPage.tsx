@@ -59,7 +59,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onGetStarted, onOpenAu
                   Log In
                 </button>
                 <button onClick={onOpenAuth || onGetStarted} className="px-5 py-2 font-medium text-sm text-on-primary bg-primary hover:bg-primary/90 rounded-lg shadow-sm transition-all hover:scale-95 duration-150">
-                  Sign In
+                  Sign Up
                 </button>
               </>
             )}
