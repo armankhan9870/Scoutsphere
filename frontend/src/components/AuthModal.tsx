@@ -297,7 +297,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onSuccess
             {submitting
               ? 'Processing...'
               : activeTab === 'login'
-              ? 'Sign In'
+              ? 'Log In'
               : activeTab === 'signup'
               ? 'Create Account'
               : activeTab === 'forgot'
@@ -343,7 +343,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onSuccess
                   d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.25 2.7 1.27 6.58l4.01 3.15c.95-2.83 3.6-4.98 6.72-4.98z"
                 />
               </svg>
-              Google Sign-In
+              Continue with Google
             </button>
           </div>
         )}
