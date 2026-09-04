@@ -57,3 +57,5 @@ docker-volumes/
 backend/scoutsphere.db
 backend/uploads/
 uploads/
+
+frontend/public/hero_dashboard.jpg
